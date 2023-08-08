@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Aug 08 16:00:41 CST 2023","Tue Aug 08 16:00:41 CST 2023","0","test_case","test_baidu","","","","参数化用例标题: 添加 2 和 2",""
+"failed","Tue Aug 08 16:00:41 CST 2023","Tue Aug 08 16:00:41 CST 2023","1","test_case","test_baidu","","","","参数化用例标题: 添加 1 和 2",""
+"passed","Tue Aug 08 16:00:41 CST 2023","Tue Aug 08 16:00:41 CST 2023","0","test_case","test_baidu","","","","当断言成功时，用例标题会动态更新",""
+"passed","Tue Aug 08 16:00:41 CST 2023","Tue Aug 08 16:00:41 CST 2023","0","test_case","test_baidu","","","","test_dynamic_description","<font color='red'>请求URL:</font>http://www.baidu.com<Br/><font color='red'>请求类型:</font>post<Br/><font color='red'>期望结果:</font>200<Br/><font color='red'>实际结果描述:</font>404<Br/>"
