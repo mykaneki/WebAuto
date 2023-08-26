@@ -98,3 +98,24 @@ class WebKeys:
             Select(self.locator(locator)).select_by_visible_text(text)
         else:
             print("参数错误")
+
+    def keyDown(self, key):
+        """
+        按下键
+        :param key: Keys.{key}
+        :return: 无
+        """
+        ActionChains(self.driver) \
+            .key_down(eval(f"Keys.{key}")) \
+            .perform()
+
+    # 松开键
+    def keyUp(self, key):
+        """
+        松开键
+        :param key: Keys.{key}
+        :return: 无
+        """
+        ActionChains(self.driver) \
+            .key_up(eval(f"Keys.{key}")) \
+            .perform()

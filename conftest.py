@@ -10,18 +10,12 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 
 
-@pytest.fixture()
-def login():
-    print("用例准备工作")
-
-
 # scope为session，整个项目只会启动一次浏览器，关闭一次浏览器
-# scope为function，每个用例都会启动和关闭浏览器
+
 @pytest.fixture(autouse=True, scope='session')
 def browser():
-    # 01 用例前置操作
     # 初始化浏览器
-    # 定义全局变量driver，本文件其他fix也能直接用
+    # 定义全局变量driver
     global driver
     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
@@ -29,11 +23,13 @@ def browser():
     driver.set_window_position(1900, -200)
     driver.set_window_size(1550, 1000)
 
-    # 02 用例执行，返回driver,username,password,wait
     yield driver
 
-    # 03 用例后置，关闭浏览器
+    # 用例后置，关闭浏览器
     driver.quit()
+
+
+# scope为function，每个用例都会启动和关闭浏览器
 
 
 """

@@ -73,4 +73,4 @@ if __name__ == '__main__':
     file_name = None
     run_tests(file_name=file_name, marker=None, parallel=None, reruns=None)
     generate_report()
-    serve_report()
+    # serve_report()
